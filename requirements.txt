@@ -1,0 +1,13 @@
+# ---- Core dashboard (always required) ----
+streamlit>=1.40.0
+pandas>=2.2.0
+numpy>=1.26.0
+plotly>=5.24.0
+Pillow>=10.0.0
+
+# ---- Live classifier tab (required to run real-time predictions) ----
+# These pull in the trained DistilBERT model. They are large; if you only want
+# the analytics/visualisation pages you can comment these three out.
+torch>=2.2.0
+transformers>=4.46.0
+safetensors>=0.4.5
