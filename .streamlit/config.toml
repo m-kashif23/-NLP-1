@@ -1,0 +1,7 @@
+[server]
+   maxUploadSize = 2048
+   fileWatcherType = "none"
+
+   [theme]
+   base = "light"
+   primaryColor = "#3b6fff"
