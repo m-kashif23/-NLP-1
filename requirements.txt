@@ -4,11 +4,13 @@
 # ---------------------------------------------------------------------
 
 # ---- Core dashboard (always required) ----
-streamlit>=1.40.0
-pandas>=2.2.0          # used everywhere, incl. company-level groupby on Accountability
+# Streamlit 1.45+ is required: use_container_width was removed after 2025-12-31
+# and replaced by width="stretch" / width="content".
+streamlit>=1.45.0
+pandas>=2.2.0
 numpy>=1.26.0
-plotly>=5.24.0         # px.bar / px.line / go.Heatmap used across pages
-Pillow>=10.0.0         # image rendering for st.image (training_curves.png, etc.)
+plotly>=5.24.0
+Pillow>=10.0.0
 
 # ---- Live classifier tab ----
 # CPU-only PyTorch wheel: much smaller install, fits Streamlit Cloud's build.
