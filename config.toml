@@ -1,7 +1,0 @@
-[server]
-# Allow large model/dataset uploads (default is 200 MB).
-maxUploadSize = 2048
-
-[theme]
-base = "light"
-primaryColor = "#3b6fff"
