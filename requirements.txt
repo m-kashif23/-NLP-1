@@ -1,0 +1,24 @@
+# Consumer Financial Complaint Classifier — Dashboard
+# Covers all pages: Overview, Dataset, Training, Evaluation,
+# Live classifier, Accountability (high-risk institutions), Model card.
+# ---------------------------------------------------------------------
+
+# ---- Core dashboard (always required) ----
+# Streamlit 1.45+ is required: use_container_width was removed after 2025-12-31
+# and replaced by width="stretch" / width="content".
+streamlit>=1.45.0
+pandas>=2.2.0
+numpy>=1.26.0
+plotly>=5.24.0
+Pillow>=10.0.0
+
+# ---- Live classifier tab ----
+# CPU-only PyTorch wheel: much smaller install, fits Streamlit Cloud's build.
+# torchvision is included only so that transformers' image-processing modules
+# import cleanly (Streamlit's file watcher walks into them). It is not used by
+# the DistilBERT text classifier itself.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2.0
+torchvision>=0.17.0
+transformers>=4.46.0
+safetensors>=0.4.5
