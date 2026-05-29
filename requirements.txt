@@ -1,0 +1,19 @@
+# Consumer Financial Complaint Classifier — Dashboard
+# Covers all pages: Overview, Dataset, Training, Evaluation,
+# Live classifier, Accountability (high-risk institutions), Model card.
+# ---------------------------------------------------------------------
+
+# ---- Core dashboard (always required) ----
+streamlit>=1.40.0
+pandas>=2.2.0          # used everywhere, incl. company-level groupby on Accountability
+numpy>=1.26.0
+plotly>=5.24.0         # px.bar / px.line / go.Heatmap used across pages
+Pillow>=10.0.0         # image rendering for st.image (training_curves.png, etc.)
+
+# ---- Live classifier tab ----
+# CPU-only PyTorch wheel: much smaller install, fits Streamlit Cloud's build.
+# If you don't need live inference, you can comment these three lines out.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2.0
+transformers>=4.46.0
+safetensors>=0.4.5
